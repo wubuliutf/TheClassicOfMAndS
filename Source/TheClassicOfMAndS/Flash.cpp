@@ -12,16 +12,15 @@ AFlash::AFlash()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	LightIntensity = 3000.f;
+	LightIntensity = 9000.f;
 
 	PointLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("Point Light"));
 	PointLight->Intensity = LightIntensity;
-	PointLight->FColor = Blue;
 	PointLight->bVisible = true;
 	RootComponent = PointLight;
 
 	LightSphere = CreateDefaultSubobject<USphereComponent>(TEXT("Light Sphere Comp"));
-	LightSphere->InitSphereRadius(600.0f);
+	LightSphere->InitSphereRadius(200.0f);
 	LightSphere->SetCollisionProfileName(TEXT("Trigger"));
 	LightSphere->SetupAttachment(RootComponent);
 
