@@ -16,6 +16,13 @@ public:
 	// Sets default values for this pawn's properties
 	AMainCharacter();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+		float BaseTurnRate;
+
+	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+		float BaseLookUpRate;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enums")
 		float StaminaDrainRate;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enums")
